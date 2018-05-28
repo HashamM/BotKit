@@ -3,11 +3,12 @@
         "port": 8003
     },
     "app": {
-        "apiPrefix" : ""
+        "apiPrefix" : "",
+        "url": "https://741fffeb.ngrok.io"
     },
     "credentials": {
-        "apikey": "test_api_key",
-        "appId": "test_app_id"
+        "apikey": "/8h3YDlEEXwXrD2s7bRmpqvsdZsPHReTG7ntSr/kq7Q=",
+        "appId": "cs-3c7bf75a-6c9a-5857-88d1-78334970a80f"
     },
     "redis": {
         "options": {
@@ -19,6 +20,6 @@
     "examples" : {
         "mockServicesHost"  : "http://localhost:8004"
     },
-    "liveagentlicense": "8947569",
+    "liveagentlicense": "9800800",
     "supportsMessageAck": true
 }

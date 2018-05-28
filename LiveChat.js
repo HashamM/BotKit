@@ -1,5 +1,5 @@
-var botId               = "st-f82726cb-4cd6-5ec4-bd35-7f5542b616dc";
-var botName             = "AgentTransferDemoBot";
+var botId               = "st-aef4164d-614a-5416-ac82-aac243291e72";
+var botName             = "Travel Planning Sample";
 var sdk                 = require("./lib/sdk");
 var request             = require('request');
 var Promise             = require('bluebird');
@@ -18,7 +18,7 @@ var userResponseDataMap = {};
  *
  * @param {string} visitorId user id
  * @param {string} ssid session id of the live chat
- * @param {string} last message sent/received to/by agent 
+ * @param {string} last message sent/received to/by agent
 */
 function getPendingMessages( visitorId, ssid, last_message_id){
     debug("getPendingMessages: %s %s ", visitorId, ssid);
@@ -56,7 +56,7 @@ function getPendingMessages( visitorId, ssid, last_message_id){
 }
 
 /*
- * Schedule a joob to fetch messages every 5 seconds 
+ * Schedule a joob to fetch messages every 5 seconds
  */
 schedular.scheduleJob('*/5 * * * * *', function(){
     debug('schedular triggered');
@@ -73,7 +73,7 @@ schedular.scheduleJob('*/5 * * * * *', function(){
 function gethistory(req, res){
     var userId = req.query.userId;
     var data = userDataMap[userId];
-    
+
     if(data) {
         data.limit = 100;
         return sdk.getMessages(data, function(err, resp){
